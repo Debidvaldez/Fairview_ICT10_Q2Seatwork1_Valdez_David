@@ -1,0 +1,125 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="trap.min.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <title>Seatwork 1</title>
+</head>
+<style>
+    body {
+        background-color: hsl(149, 47%, 81%);
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    .container {
+        background: white;
+        padding: 25px;
+        margin-top: 40px;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        width: 650px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .studentinfo, .gradeinfo {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    input[type="text"],
+    input[type="number"] {
+        width: 600px;
+        padding: 8px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        text-align: center;
+    }
+    button {
+        margin-top: 15px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        background-color: hwb(149 52% 0%);
+        color: black;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    button:hover {
+        background-color: hwb(149 38% 26%);
+    }
+    .grade_summary_box {
+        margin-top: 20px;
+        padding: 15px;
+        min-height: 60px;
+        border: 1px dashed #888;
+        border-radius: 10px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }     
+</style>
+<body>  
+    <div class="container d-flex min-vh-100 justify-content-center">
+        <h1>Student Grade Calculator</h1>
+        <div class="studentinfo">
+            <div>
+                <label for="science">First Name:</label>
+                <br>
+                <input type="text" name="1stname" id="1stname">
+            </div>
+            <div>
+                <label for="science">Last Name:</label>
+                <br>
+                <input type="text" name="lastname" id="lastname">
+            </div>
+        </div>
+        <div class="gradeinfo">
+            <div>
+                <label for="science">Science:</label>
+                <br>
+                <input type="number" name="science" id="science">
+            </div>
+            <div>
+                <label for="math">Math:</label>
+                <br>
+                <input type="number" name="math" id="math">
+            </div>
+            <div>
+                <label for="english">English:</label>
+                <br>
+                <input type="number" name="english" id="english">
+            </div>
+            <div>
+                <label for="filipino">Filipino</label>
+                <br>
+                <input type="number" name="filipino" id="filipino">
+            </div>
+            <div>
+                <label for="ict">ICT:</label>
+                <br>
+                <input type="number" name="ict" id="ict">
+            </div>
+            <div>
+                <label for="pe">PE:</label>
+                <br>
+                <input type="number" name="pe" id="pe">
+            </div>  
+        </div>
+        <div>
+            <button py-click="gwa_calculation">Calculate GWA</button>
+        </div>
+        <div class="student_info_box">
+            <h3 id="student_info"></h3>
+        </div>
+        <div class="grade_summary_box">
+            <a id="grade_summary"></a>
+        </div>
+        <div>
+            <h2 id="GWA"></h2>
+        </div> 
+    </div>
+    <py-script src="main.py"></py-script>
+</body>
+</html>
